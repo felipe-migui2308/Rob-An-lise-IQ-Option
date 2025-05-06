@@ -56,9 +56,9 @@ def validar_ativo_binario(ativo):
 
 def conectar():
     global api
-    email = email_entry.get()
-    senha = senha_entry.get()
-    conta = conta_var.get()
+    email = "seu email"
+    senha = "sua senha"
+    conta = "demo / real"
 
     api = IQ_Option(email, senha)
     api.connect()
