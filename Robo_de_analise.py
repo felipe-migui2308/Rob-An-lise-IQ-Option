@@ -56,9 +56,9 @@ def validar_ativo_binario(ativo):
 
 def conectar():
     global api
-    email = "seu email"
-    senha = "sua senha"
-    conta = "demo / real"
+    email = email_entry.get()
+    senha = senha_entry.get()
+    conta = conta_var.get()
 
     api = IQ_Option(email, senha)
     api.connect()
@@ -244,12 +244,11 @@ frame_login.pack(pady=10, fill="x", padx=10)
 
 tk.Label(frame_login, text="Email:").grid(row=0, column=0, sticky='w')
 email_entry = tk.Entry(frame_login, width=30)
-email_entry.insert(0, 'felipecdm04@gmail.com')
+
 email_entry.grid(row=0, column=1)
 
 tk.Label(frame_login, text="Senha:").grid(row=1, column=0, sticky='w')
 senha_entry = tk.Entry(frame_login, show="*", width=30)
-senha_entry.insert(0, '08fortoday123')
 senha_entry.grid(row=1, column=1)
 
 conta_var = tk.StringVar(value="demo")
